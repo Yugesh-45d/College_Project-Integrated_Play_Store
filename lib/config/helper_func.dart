@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:play_store_app/config/app_colors.dart';
 import 'package:play_store_app/config/app_fonts.dart';
 
@@ -346,15 +347,15 @@ class AppFunc {
 //     );
 //   }
 
-  //----------------------------For Classes Card Widget---------------------------------------------
+  //----------------------------For ImagePicker Widget---------------------------------------------
 
-  // static pickImage(ImageSource source) async {
-  //   final ImagePicker imagePicker = ImagePicker();
+  static pickImage(ImageSource source) async {
+    final ImagePicker imagePicker = ImagePicker();
 
-  //   XFile? file = await imagePicker.pickImage(source: source);
+    XFile? file = await imagePicker.pickImage(source: source);
 
-  //   if (file != null) {
-  //     return await file.readAsBytes();
-  //   }
-  // }
+    if (file != null) {
+      return await file.readAsBytes();
+    }
+  }
 }

@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:play_store_app/screens/playstore_app/app_details_screen.dart';
 
-import '../../datas/playstore/playstore_data.dart';
-import '../../models/playstore/top_chart_model.dart';
+import '../datas/playstore_data.dart';
+import '../models/playstore_ top_chart_model.dart';
 
 class PlayStoreTopchartWidget extends StatelessWidget {
   const PlayStoreTopchartWidget({super.key});

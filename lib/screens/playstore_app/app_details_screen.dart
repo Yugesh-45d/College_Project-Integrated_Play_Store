@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:play_store_app/config/app_colors.dart';
 import 'package:play_store_app/config/app_fonts.dart';
 import 'package:play_store_app/config/helper_func.dart';
+import 'package:play_store_app/screens/other_apps/business_card_generator/screens/splash_screen.dart';
+import 'package:play_store_app/screens/other_apps/mero_music/splash_screen.dart';
 
 class PlayStoreAppScreenDetail extends StatefulWidget {
   final Map<String, dynamic> appData;
@@ -18,6 +19,24 @@ class PlayStoreAppScreenDetail extends StatefulWidget {
 }
 
 class _PlayStoreAppScreenDetailState extends State<PlayStoreAppScreenDetail> {
+  navfunc() {
+    switch (widget.appData['name']) {
+      case 'Business Card':
+        Navigator.pushReplacement(
+            context,
+            (MaterialPageRoute(builder: (context) {
+              return BusinessCardSplashScreen();
+            })));
+
+      case 'Mero Music':
+        Navigator.pushReplacement(
+            context,
+            (MaterialPageRoute(builder: (context) {
+              return MeroMusicSplashScreen();
+            })));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -129,7 +148,9 @@ class _PlayStoreAppScreenDetailState extends State<PlayStoreAppScreenDetail> {
             AppFunc.mySizedbox(height: 32),
             AppFunc.myButton(
               text: "Install",
-              func: () {},
+              func: () {
+                navfunc();
+              },
               borderRadius: 32,
               height: 48,
             ),
