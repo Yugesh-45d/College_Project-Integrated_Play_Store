@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:play_store_app/config/app_colors.dart';
 import 'package:play_store_app/config/helper_func.dart';
 import 'package:play_store_app/widgets/playstore_for_you.dart';
