@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
@@ -173,180 +174,23 @@ class AppFunc {
     );
   }
 
-//----------------------------For Card Widget---------------------------------------------
-  // static Card myCard({
-  //   required String image,
-  //   required String faculty,
-  //   required String subject,
-  //   required int hours,
-  //   double cardWidth = 224,
-  //   double imageHeight = 144,
-  //   double facultytextSize = 20,
-  //   double subjecttextSize = 24,
-  //   double hoursTextSize = 16,
-  //   bool showFaculty = true,
-  //   bool showSubject = true,
-  //   bool showHours = true,
-  //   bool showBorder = false,
-  // }) {
-  //   return Card(
-  //     shape: RoundedRectangleBorder(
-  //       borderRadius: BorderRadius.circular(16),
-  //       side: BorderSide(
-  //         color: showBorder ? AppColors.primaryColor : Colors.transparent,
-  //         width: 2,
-  //       ),
-  //     ),
-  //     color: AppColors.secondaryColor,
-  //     elevation: 2,
-  //     child: Padding(
-  //       padding: AppFunc.myPadding(),
-  //       child: Column(
-  //         children: [
-  //           SizedBox(
-  //             child: AppFunc.myLocalImage(
-  //               image: image,
-  //               height: imageHeight,
-  //             ),
-  //           ),
-  //           if (showFaculty)
-  //             Column(
-  //               children: [
-  //                 AppFunc.mySizedbox(height: 8),
-  //                 SizedBox(
-  //                   width: cardWidth.w,
-  //                   child: AppFunc.myText(
-  //                     alignment: TextAlign.left,
-  //                     text: faculty,
-  //                     size: facultytextSize,
-  //                     color: AppColors.primaryColor,
-  //                     font: AppFonts.thirdFont,
-  //                   ),
-  //                 ),
-  //               ],
-  //             ),
-  //           if (showSubject)
-  //             Column(
-  //               children: [
-  //                 AppFunc.mySizedbox(height: 8),
-  //                 SizedBox(
-  //                   width: cardWidth.w,
-  //                   child: AppFunc.myText(
-  //                     alignment: TextAlign.left,
-  //                     text: subject,
-  //                     size: subjecttextSize,
-  //                     color: AppColors.primaryColor,
-  //                     font: AppFonts.primaryFont,
-  //                   ),
-  //                 ),
-  //               ],
-  //             ),
-  //           if (showHours)
-  //             Column(
-  //               children: [
-  //                 AppFunc.mySizedbox(height: 8),
-  //                 SizedBox(
-  //                   width: cardWidth.w,
-  //                   child: AppFunc.myText(
-  //                     alignment: TextAlign.left,
-  //                     text: "$hours hours",
-  //                     size: hoursTextSize,
-  //                     color: AppColors.primaryColor,
-  //                   ),
-  //                 ),
-  //               ],
-  //             ),
-  //         ],
-  //       ),
-  //     ),
-  //   );
-  // }
+  //----------------------------For Cupertino Widget---------------------------------------------
 
-// //----------------------------For Cupertino ListTile---------------------------------------------
-
-//   static CupertinoListTile myListCupertinoListTile({required String text}) {
-//     return CupertinoListTile(
-//       title: AppFunc.myText(
-//         text: text,
-//         font: AppFonts.thirdFont,
-//         size: 20,
-//         color: AppColors.primaryColor,
-//       ),
-//       trailing: const Icon(
-//         Icons.arrow_forward_ios,
-//         color: AppColors.primaryColor,
-//         size: 20,
-//       ),
-//     );
-//   }
-
-// //----------------------------For Classes Card Widget---------------------------------------------
-
-//   static Card myClassesCard({
-//     required String image,
-//     required String faculty,
-//     required String subject,
-//     required double progress,
-//   }) {
-//     return Card(
-//       color: AppColors.secondaryColor,
-//       elevation: 2,
-//       child: Padding(
-//         padding: AppFunc.myPadding(),
-//         child: Row(
-//           children: [
-//             Image.asset(
-//               "assets/$image",
-//               height: 96.h,
-//               width: 96.w,
-//             ),
-//             AppFunc.mySizedbox(width: 12),
-//             Column(
-//               children: [
-//                 SizedBox(
-//                   width: 168.w,
-//                   child: AppFunc.myText(
-//                     alignment: TextAlign.left,
-//                     text: faculty,
-//                     size: 20,
-//                     color: AppColors.primaryColor,
-//                     font: AppFonts.thirdFont,
-//                   ),
-//                 ),
-//                 SizedBox(
-//                   width: 168.w,
-//                   child: AppFunc.myText(
-//                     alignment: TextAlign.left,
-//                     text: subject,
-//                     size: 20,
-//                     color: AppColors.primaryColor,
-//                     font: AppFonts.primaryFont,
-//                   ),
-//                 ),
-//                 AppFunc.mySizedbox(height: 8),
-//                 SizedBox(
-//                   width: 168.w,
-//                   child: AppFunc.myText(
-//                     alignment: TextAlign.left,
-//                     text: "$progress% Completed",
-//                     color: AppColors.primaryColor,
-//                     font: AppFonts.primaryFont,
-//                   ),
-//                 ),
-//                 SizedBox(
-//                   width: 168.w,
-//                   child: LinearProgressIndicator(
-//                     value: progress / 100,
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-
+  static CupertinoListTile myListCupertinoListTile({required String text}) {
+    return CupertinoListTile(
+      title: AppFunc.myText(
+        text: text,
+        font: AppFonts.thirdFont,
+        size: 20,
+        color: AppColors.primaryColor,
+      ),
+      trailing: Icon(
+        Icons.arrow_forward_ios,
+        color: AppColors.primaryColor,
+        size: 20,
+      ),
+    );
+  }
   //----------------------------For ImagePicker Widget---------------------------------------------
 
   static pickImage(ImageSource source) async {

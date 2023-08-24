@@ -4,7 +4,11 @@ import 'package:play_store_app/config/app_colors.dart';
 import 'package:play_store_app/config/app_fonts.dart';
 import 'package:play_store_app/config/helper_func.dart';
 import 'package:play_store_app/screens/other_apps/business_card_generator/screens/splash_screen.dart';
+import 'package:play_store_app/screens/other_apps/calculator/screens/splash_screen.dart';
+import 'package:play_store_app/screens/other_apps/instagram/screens/splash/splash_screen.dart';
 import 'package:play_store_app/screens/other_apps/mero_music/splash_screen.dart';
+import 'package:play_store_app/screens/other_apps/mero_quiz/screens/splash_screen.dart';
+import 'package:play_store_app/screens/other_apps/notes/screens/splash_screen.dart';
 
 class PlayStoreAppScreenDetail extends StatefulWidget {
   final Map<String, dynamic> appData;
@@ -33,6 +37,34 @@ class _PlayStoreAppScreenDetailState extends State<PlayStoreAppScreenDetail> {
             context,
             (MaterialPageRoute(builder: (context) {
               return MeroMusicSplashScreen();
+            })));
+
+      case 'Mero Quiz':
+        Navigator.pushReplacement(
+            context,
+            (MaterialPageRoute(builder: (context) {
+              return MeroQuizSplashScreen();
+            })));
+
+      case 'Calculator':
+        Navigator.pushReplacement(
+            context,
+            (MaterialPageRoute(builder: (context) {
+              return CalculatorSplashScreen();
+            })));
+
+      case 'Notes':
+        Navigator.pushReplacement(
+            context,
+            (MaterialPageRoute(builder: (context) {
+              return NotesAppSplashScreen();
+            })));
+
+      case 'Instagram':
+        Navigator.pushReplacement(
+            context,
+            (MaterialPageRoute(builder: (context) {
+              return InstaSplashScreen();
             })));
     }
   }
