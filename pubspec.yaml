@@ -46,6 +46,12 @@ dependencies:
   flutter_svg: ^2.0.7
   flutter_quill: ^7.4.1
   rich_readmore: ^1.0.6
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: false
+  image_path: "assets/playstore.png"
 
 dev_dependencies:
   flutter_test:

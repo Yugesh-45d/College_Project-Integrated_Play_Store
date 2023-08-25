@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:play_store_app/config/app_colors.dart';
 import 'package:play_store_app/screens/other_apps/business_card_generator/provider/image_provider.dart';
 import 'package:play_store_app/screens/other_apps/notes/providers/provider_data.dart';
-import 'package:play_store_app/screens/playstore_app/playstore_homepage.dart';
+import 'package:play_store_app/screens/playstore_app/body_pages/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -36,8 +36,7 @@ class MyApp extends StatelessWidget {
             ),
             useMaterial3: true,
           ),
-          home: PlayStoreHomePage(),
-          // home: InstaSplashScreen(),
+          home: PlayStoreSplashScreen(),
         ),
       ),
     );

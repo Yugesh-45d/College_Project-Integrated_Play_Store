@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:play_store_app/config/app_colors.dart';
 import 'package:play_store_app/config/helper_func.dart';
-import 'package:play_store_app/widgets/playstore_for_you.dart';
 import 'package:play_store_app/widgets/playstore_top_chart.dart';
 
 class PlayStoreAppPage extends StatefulWidget {
@@ -16,7 +15,7 @@ class _PlayStoreAppPageState extends State<PlayStoreAppPage>
   late final _tabcontroller;
   @override
   void initState() {
-    _tabcontroller = TabController(length: 3, vsync: this, initialIndex: 0);
+    _tabcontroller = TabController(length: 2, vsync: this, initialIndex: 0);
     super.initState();
   }
 
@@ -51,9 +50,6 @@ class _PlayStoreAppPageState extends State<PlayStoreAppPage>
             controller: _tabcontroller,
             tabs: [
               Tab(
-                text: "For you",
-              ),
-              Tab(
                 text: "Top charts",
               ),
               Tab(
@@ -63,7 +59,6 @@ class _PlayStoreAppPageState extends State<PlayStoreAppPage>
           ),
           Expanded(
             child: TabBarView(controller: _tabcontroller, children: [
-              PlayStoreForyou(),
               PlayStoreTopchartWidget(),
               SingleChildScrollView(child: Container()),
             ]),

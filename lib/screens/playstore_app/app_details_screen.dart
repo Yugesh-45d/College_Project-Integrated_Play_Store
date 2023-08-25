@@ -179,7 +179,7 @@ class _PlayStoreAppScreenDetailState extends State<PlayStoreAppScreenDetail> {
             ),
             AppFunc.mySizedbox(height: 32),
             AppFunc.myButton(
-              text: "Install",
+              text: "Open",
               func: () {
                 navfunc();
               },
